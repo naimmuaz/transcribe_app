@@ -15,13 +15,12 @@ class Window(QtWidgets.QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
 
-        uic.loadUi("test.ui",self)
+        uic.loadUi("transcribe_ui.ui",self)
 
         self.pushButton = self.findChild(QtWidgets.QPushButton, "pushButton")
         self.label = self.findChild(QtWidgets.QLabel, "label")
 
         self.pushButton.clicked.connect(self.clicked)
-
 
         self.show()
 
